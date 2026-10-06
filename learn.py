@@ -1,64 +1,87 @@
-print(544484555 % 2)
-print((2 + 3)**2)
-print (2 + 3 * 2)
-print(2 + (3 * 2))
-print(43+2)
-print((2+3)**2)
-print("hello \n my name is fatemeh")
-print("Hello \t I am sogand")
-print("Hello \\ i am sogand ")
-print("hello \" i am sogand")
-print("hello \
-    sogand \
-        tast")
-test = True
-print(type(test))
-x = 23456894244
-y = x + 199848588
-#************************************************
 
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- 
-print('Enter 2 int, and i will tell you',
-'teh relationship they satisfy')
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
 
-# * Read number 1 *
-number1 = int(input('Enter your first number :'))
+print("سلام! \n من دستیار هوشمند تو هستم.بیا وضعیت امروزت رو بررسی کنیم!🤖 ")
 
-# * Read number 2 *
-number2 =int(input('Enter Your Second Number : '))
+name = input("نامت چیست؟:")
+age = input("چند سالته؟:")
+grade =input("پایه تحصیلی ات چیست؟ :")
+study_hours = float(input("امروز چند ساعت مطالعه کردی؟:"))
+last_exam_score = float(input("نمره آخرین امتحانت چند بود؟:"))
+energy =int(input("میزان انرژی امروزت از ۱تا۱۰چنده؟:"))
 
-if number1 == number2:
-     print(number1, " is equal to", number2)
+if study_hours <= 1:
+    print("امروز مطالعه کمی داشتی😴 .بهتره زمان بیشتری به درس اختصاص بدی :")
+elif 1<=study_hours <=3:
+    print("مطالعه امروزت قابل قبول بوده است👍 :")
+elif study_hours >=3: 
+    print("عالیه🔥!امروز مطالعه خوبی داشتی.:")
+    
+if last_exam_score <10:
+    print("نمره ات پایین بود💔!بهتر نقاط ضعفت رو پیدا کنی.")
+elif last_exam_score <15:
+    print("نمره ات متوسط با تمرین بیشتر میتونی بهترش کنی😕 !")
+elif last_exam_score <18:
+    print("عملکرد خوبی داشتی. ادامه بده🌟!")
+else:
+    print("عالی👏!عملکرد فوق العاده ای داشتی.")
+    
+if energy <3:
+     print("امروز انرژی کمی داری;بهتره کمی استراحت کنی😴 !")
      
-if number1 != number2:
-     print(number1, " is not equal to", number2)
-         
-if number1 < number2:
-     print(number1, " is less than", number2)
-         
-if number1 > number2:
-     print(number1, " is not less than", number2)
-             
-if number1 <= number2:
-     print(number1, " is less than or equal", number2)
+elif energy <7:
+    print("انرژیت مناسبه;میتونی روی تمرین هات کار کنی😊!")
+else:
+    print("انرژی فوق العاده ای داری!امروز فرصت خوبی برای پیشرفته🔋!")
+    
+if study_hours <1 and last_exam_score <10:
+    print("امروز هم مطالعه ات کم بوده و هم نمره ات پایین بوده")
+    print("بهتره فردا زمان بیشتری برای مطالعه بزاری 📚")
+elif study_hours >3 and last_exam_score <10:
+    print("زیاد مطالعه کردی ,اما نمره ات وایین بوده 🤔 ")
+    print("بهتره روش مطالعه ات رو تغییر بدی🧠 ")
+elif study_hours >3 and last_exam_score <15:
+    print("مطالعه زیاد و نمره خوب👏 ")    
+    print("روش فعلیت نتیجه خوبی داشته,ادامه بده🌟")    
+else:
+    print("وضعیتت خوب و متعادله👍")  
+    print("با کمی تلاش بیشتر میتونی بهتر بشی🌱")
+    
+    daily_score = (last_exam_score /20)*50 + (energy /10)*30 + min(study_hours / 5 ,1)*20
+    print("امتیاز امروزت📊 :", daily_score)
      
-if number1 >= number2:
-    print(number1, "is greater than or equal", number2)
+    if daily_score >=80:
+        print("عملکرد فوق العاده ای داشتی 🏆") 
+    elif daily_score >=60:
+        print("عملکرد خوبی داشتی👍")
+    elif daily_score >=40:
+        print("عملکردت متوسط بود😊")
+    else:
+        print("فردا میتونی بهتر عمل کنی 🌱")            
+      
+    print("برنامه پیشنهادی فردا📚")
     
-#***********************************************#
-
-##*********************************# 
- 
-grade = 85
-
-if grade >= 68 :
-    print("passed")
+    if study_hours <1:
+        print("فردا حداقل ۲ ساعت مطالعه کن.📖 ")
+    elif study_hours <=3:
+        print("فردا حدود ۳ ساعت مطالعه داشته باش 📖 ")
+    else:
+        print("فردا همین میزان مطالعه رو حفظ کن و استراحت کافی داشته باش.🧠")
+        
+    print("================================")
+    print("گزارش نهایی دستیار هوشمند📋") 
+    print("================================")
     
-if grade :
-    print("failed")
+    print("نام👤", name)
+    print("سن🎂", age)  
+    print("پایه📚", grade)
+    print("ساعت مطالعه⏰", study_hours)
+    print("نمره امتحان📖", last_exam_score)
+    print("میزان انرژی🔋", energy)
+    print("امتیاز روزانه🏆", daily_score,"از100")
     
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+    print("=================================")
+    print("گزارش امروزت اماده شد🤖")
+    print("ادامه بده و هر روز بهتر شو🚀")
+    print("=================================")
     
-yten
-
