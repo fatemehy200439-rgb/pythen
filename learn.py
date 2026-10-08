@@ -53,10 +53,10 @@ else:
     print("وضعیتت خوب و متعادله👍")  
     print("با کمی تلاش بیشتر میتونی بهتر بشی🌱")
     
+    #میزان عملکرد
     daily_score = (last_exam_score /20)*50 + (energy /10)*30 + min(study_hours / 5 ,1)*20
     print("امتیاز امروزت📊 :", daily_score)
      
-# میزان عملکرد
     if daily_score >=80:
         print("عملکرد فوق العاده ای داشتی 🏆") 
     elif daily_score >=60:
